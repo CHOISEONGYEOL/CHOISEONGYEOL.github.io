@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="ko">
   <head>
-    <meta name="naver-site-verification" content="dfd16dd300264fe46b02916f6f26b7687fd1c801" />
     <meta charset="utf-8" />
     <title>무한원숭이 - 프로젝트 런처</title>
     <meta name="description" content="무한원숭이는 여러 프로젝트를 한 번에 관리하고 실행할 수 있게 도와주는 프로젝트 런처입니다." />
+
+    <!-- 네이버 서치 등록 -->
+    <meta name="naver-site-verification" content="dfd16dd300264fe46b02916f6f26b7687fd1c801" />
 
     <!-- 예쁜 한글 폰트: Noto Sans KR -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-      /* 전체 기본 스타일 */
       body {
         margin: 0;
         padding: 0;
@@ -21,12 +22,11 @@
         color: #222;
       }
 
-      /* 가운데 정렬용 래퍼 */
       .wrapper {
         max-width: 900px;
         margin: 40px auto;
         padding: 0 16px;
-        text-align: center;
+        text-align: center; /* 가운데 정렬 */
       }
 
       h1 {
@@ -40,7 +40,7 @@
         margin: 8px 0;
       }
 
-      /* 이미지 가운데 정렬 */
+      /* 이미지 가운데 정렬용 클래스 */
       .monkey-image {
         display: block;
         margin: 20px auto 32px auto;
@@ -49,7 +49,6 @@
         border-radius: 24px;
       }
 
-      /* 버튼 스타일 */
       .launcher-button {
         display: inline-block;
         margin-top: 24px;
@@ -72,11 +71,12 @@
       }
     </style>
   </head>
+
   <body>
     <div class="wrapper">
       <h1>무한원숭이 프로젝트 런처</h1>
 
-      <!-- 가운데 정렬된 캐릭터 이미지 -->
+      <!-- 여기서 src만 실제 파일명이랑 맞으면 됨! -->
       <img
         src="./infinitemonkey_character.png"
         alt="무한원숭이 캐릭터"
