@@ -4,12 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>무한원숭이 - 프로젝트 런처</title>
-    <meta name="description" content="무한원숭이는 여러 프로젝트를 한 번에 관리하고 실행할 수 있게 도와주는 프로젝트 런처입니다." />
+    <meta name="description" content="무한원숭이는 선생님들의 반복업무를 줄여드립니다." />
 
-    <!-- 네이버 서치 등록 -->
     <meta name="naver-site-verification" content="dfd16dd300264fe46b02916f6f26b7687fd1c801" />
 
-    <!-- 예쁜 한글 폰트: Noto Sans KR -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,14 +19,14 @@
         font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         background-color: #fffdf9;
         color: #222;
-        font-size: 16px; /* PC 기준 기본 폰트 크기 */
+        font-size: 16px;
       }
 
       .wrapper {
         max-width: 900px;
         margin: 40px auto;
         padding: 0 16px;
-        text-align: center; /* 가운데 정렬 */
+        text-align: center;
       }
 
       h1 {
@@ -42,7 +40,7 @@
         margin: 8px 0;
       }
 
-      /* 이미지 가운데 정렬용 클래스 */
+      /* 이미지 스타일 */
       .monkey-image {
         display: block;
         margin: 20px auto 32px auto;
@@ -51,6 +49,7 @@
         border-radius: 24px;
       }
 
+      /* 버튼 스타일 */
       .launcher-button {
         display: inline-block;
         margin-top: 24px;
@@ -72,39 +71,60 @@
         transform: translateY(-1px);
       }
 
-      /* ---------- 여기부터 모바일 전용 스타일 ---------- */
-      @media (max-width: 600px) {
-        body {
-          font-size: 18px; /* 전체 폰트 더 크게 */
-        }
-
-        .wrapper {
-          margin: 24px auto;
-          padding: 0 12px;
-        }
-
-        h1 {
-          font-size: 2.6rem; /* 제목 더 큼직하게 */
-          margin-bottom: 20px;
-        }
-
-        p {
-          font-size: 1.1rem; /* 본문도 살짝 키우기 */
-        }
-
-        .monkey-image {
-          max-width: 220px; /* 화면 좁으니까 살짝만 줄여서 균형 맞추기 */
-          margin: 16px auto 28px auto;
-        }
-
-        .launcher-button {
-          font-size: 1.1rem;
-          padding: 14px 32px;
-          width: 100%;
-          max-width: 360px; /* 버튼도 넓게, 터치하기 좋게 */
-        }
+      /* --- [추가됨] 철학 섹션 스타일 --- */
+      .divider {
+        border: 0;
+        height: 1px;
+        background: #e5e7eb;
+        margin: 60px auto 40px auto;
+        max-width: 200px;
       }
-      /* ---------- 모바일 전용 스타일 끝 ---------- */
+
+      .philosophy {
+        margin-top: 40px;
+        text-align: left; /* 긴 글은 왼쪽 정렬이 읽기 편함 */
+        background-color: #ffffff;
+        padding: 32px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        border: 1px solid #f3f4f6;
+      }
+
+      .philosophy h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 32px;
+        color: #4b5563;
+      }
+
+      .philosophy-item {
+        margin-bottom: 24px;
+      }
+
+      .philosophy-item h3 {
+        font-size: 1.2rem;
+        color: #6d28d9; /* 버튼과 깔맞춤 */
+        margin-bottom: 8px;
+      }
+
+      .philosophy-item p {
+        color: #4b5563;
+        font-size: 1rem;
+        margin: 0;
+      }
+
+      /* 모바일 반응형 */
+      @media (max-width: 600px) {
+        body { font-size: 18px; }
+        .wrapper { margin: 24px auto; padding: 0 12px; }
+        h1 { font-size: 2.6rem; margin-bottom: 20px; }
+        .monkey-image { max-width: 220px; margin: 16px auto 28px auto; }
+        .launcher-button { font-size: 1.1rem; padding: 14px 32px; width: 100%; max-width: 360px; }
+        
+        /* 모바일에서 철학 섹션 여백 조정 */
+        .philosophy { padding: 24px; }
+        .philosophy h2 { font-size: 1.3rem; }
+      }
     </style>
   </head>
 
@@ -112,7 +132,6 @@
     <div class="wrapper">
       <h1>무한원숭이 프로젝트 런처</h1>
 
-      <!-- 여기서 src만 실제 파일명이랑 맞으면 됨! -->
       <img
         src="./infinitemonkey_character.png"
         alt="무한원숭이 캐릭터"
@@ -133,6 +152,36 @@
       >
         무한원숭이 실행하러 가기
       </a>
-    </div>
+
+      <hr class="divider" />
+
+      <div class="philosophy">
+        <h2>무한원숭이가 지향하는 가치</h2>
+        
+        <div class="philosophy-item">
+          <h3>1. 행정 업무의 자동화 및 효율화</h3>
+          <p>
+            기출 문제 변형, 생활기록부 검사, 출결 관리는 교사의 시간을 가장 많이 빼앗는 반복 업무입니다. 
+            확률적으로 완벽한 결과물을 내기 위한 무한한 시도와 노동은 이제 <strong>시스템(원숭이)</strong>이 대신하겠습니다.
+          </p>
+        </div>
+
+        <div class="philosophy-item">
+          <h3>2. 교사 중심의 생태계 구축</h3>
+          <p>
+            단순한 업무 도구를 넘어, '공톡'과 구인구직 서비스를 통해 교사를 단순한 기능인이 아닌 
+            <strong>서로 연결되고 성장하는 주체</strong>로 바라보는 생태계를 만들어갑니다.
+          </p>
+        </div>
+
+        <div class="philosophy-item">
+          <h3>3. 교육의 본질 회복</h3>
+          <p>
+            이 모든 도구의 궁극적인 목적은 선생님이 행정 업무에서 해방되어, 
+            <strong>수업 연구와 학생 상담이라는 '교육의 본질'</strong>에 온전히 집중할 수 있도록 돕는 것입니다.
+          </p>
+        </div>
+      </div>
+      </div>
   </body>
 </html>
